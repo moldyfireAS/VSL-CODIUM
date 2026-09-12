@@ -3,4 +3,4 @@ VSL CODIUM (Visual studio light codium) is a lightweight ide &amp; text editor t
 
 
 
-< Made by the cd team
+> Made by the cd team
