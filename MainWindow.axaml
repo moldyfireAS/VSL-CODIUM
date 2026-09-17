@@ -1,0 +1,55 @@
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vs="clr-namespace:VSLC.Controls"
+    x:Class="VSLC.MainWindow"
+    Width="1200"
+    Height="750"
+    Background="#0D0D18"
+    TransparencyLevelHint="AcrylicBlur"
+    ExtendClientAreaToDecorationsHint="True"
+    ExtendClientAreaChromeHints="NoChrome"
+    Title="VSLCODIUM">
+
+    <Grid RowDefinitions="40, * , 24" ColumnDefinitions="200, *">
+
+
+        <Border Grid.Row="0" Grid.ColumnSpan="2" Background="#111122">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0">
+                <TextBlock Text="VSLCODIUM" Foreground="#CCCCFF" FontSize="16" FontWeight="Bold"/>
+                <vs:AnvoilvaButton Content="Run" Margin="20,0,0,0" CornerRadius="6"/>
+                <vs:AnvoilvaButton Content="Build" Margin="10,0,0,0" CornerRadius="6"/>
+            </StackPanel>
+        </Border>
+
+
+        <Border Grid.Row="1" Grid.Column="0" Background="#141422">
+            <StackPanel Margin="10">
+                <TextBlock Text="Explorer" Foreground="#CCCCFF" FontSize="14" Margin="0,0,0,10"/>
+                <vs:AnvoilvaButton Content="Open Folder" CornerRadius="6" Margin="0,0,0,10"/>
+                <vs:AnvoilvaButton Content="New File" CornerRadius="6"/>
+            </StackPanel>
+        </Border>
+
+  
+        <Border Grid.Row="1" Grid.Column="1" Background="#0F0F1A">
+            <TextBlock Text="Editor Surface Placeholder"
+                       Foreground="#8888AA"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"/>
+        </Border>
+
+     
+        <Border Grid.Row="2" Grid.ColumnSpan="2" Background="#111122">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0">
+                <TextBlock Text="Ready" Foreground="#CCCCFF"/>
+                <TextBlock Text=" | " Foreground="#555577"/>
+                <TextBlock Text="UTF-8" Foreground="#8888AA"/>
+                <TextBlock Text=" | " Foreground="#555577"/>
+                <TextBlock Text="Ln 1, Col 1" Foreground="#8888AA"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>
