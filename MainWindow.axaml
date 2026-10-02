@@ -1,0 +1,58 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:VSL_CODIUM_AVALONIA"
+        x:Class="VSL_CODIUM_AVALONIA.MainWindow"
+        x:Name="jarona"
+        x:CompileBindings="False"
+        Width="1200"
+        Height="700"
+        Title="VSLCODIUM"
+        Background="#1e1e1e">
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="40"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="180"/>
+    </Grid.RowDefinitions>
+
+
+    <Border Grid.Row="0" Background="#252526">
+      <ItemsControl Items="{Binding Tabs}">
+        <ItemsControl.ItemsPanel>
+          <ItemsPanelTemplate>
+            <StackPanel Orientation="Horizontal"/>
+          </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+
+        <ItemsControl.ItemTemplate>
+          <DataTemplate x:DataType="local:EditorTab">
+            <Button Content="{Binding Title}"
+                    Margin="10,4,0,4"
+                    Padding="8,4"
+                    Background="#3c3c3c"
+                    Foreground="White"
+                    Command="{Binding SwitchTabCommand, ElementName=jarona}"
+                    CommandParameter="{Binding}"/>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+    </Border>
+
+
+    <Border Grid.Row="1" Margin="10" Background="#1e1e1e" CornerRadius="6">
+      <ContentControl Name="EditorView"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch"/>
+    </Border>
+
+
+    <Border Grid.Row="2" Background="#111111" Margin="10" CornerRadius="6">
+      <TextBlock Text="placeholder for le terminal"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 Foreground="#87CEEB"/>
+    </Border>
+
+  </Grid>
+</Window>
